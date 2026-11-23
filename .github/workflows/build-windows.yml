@@ -1,0 +1,28 @@
+
+name: Build OBS Smooth Zoom for Windows
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  windows-x64:
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build plugin
+        shell: pwsh
+        run: .\scripts\Build-Easy-Windows.ps1
+
+      - name: Upload plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: obs-smooth-zoom-Windows-x64
+          path: dist/obs-smooth-zoom-Windows-x64.zip
+          if-no-files-found: error
