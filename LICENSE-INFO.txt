@@ -1,0 +1,6 @@
+OBS Smooth Zoom v0.1
+License: GNU GPL v2.0 or later
+See https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+Contains an original OBS plugin implementation with generic wheel zoom semantics.
+Build requires OBS Studio/libobs (GPL-2.0-or-later) and Qt6 (separate licensing).

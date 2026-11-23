@@ -1,0 +1,6 @@
+# Generated OBS template build checkout and packages
+.obs-template-build/
+dist/
+build-x64/
+stage/
+*.user
